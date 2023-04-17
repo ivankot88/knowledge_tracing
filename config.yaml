@@ -1,0 +1,34 @@
+##################################################
+# exp_opts
+##################################################
+random_state: 404
+exp_name: 'student_model'
+save_model: false
+
+##################################################
+# data_opts
+##################################################
+data_path: "../OKT/data"
+data_filename: "python_1_submits.pkl"
+test_size: 0.2
+max_len: 300  # maximum number of submission per student 
+n_workers: 0
+
+##################################################
+# model_opts
+##################################################
+num_encoder_layers: 3
+num_decoder_layers: 3
+emb_size: 768
+nhead: 8
+dim_feedforward: 256
+
+##################################################
+# train_opts
+##################################################
+is_test: false
+epochs: 100
+batch_size: 32
+lr: 0.001
+warmup_steps: 30
+use_scheduler: true
