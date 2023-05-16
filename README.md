@@ -1,3 +1,21 @@
-## Profiling of Students' Competencies for Adaptive Learning Systems
+# knowledge_tracing
 
-This repository includes the code and experimental data in our paper entitled "Profiling of Students' Competencies for Adaptive Learning Systems".
+Knowledge Tracing model - is transformer encoder-decoder based model that allows you to track student's academic results.
+
+## Preparing 
+Use `prepare_data.py` to collect all data from folders.
+
+## Installing dependencies
+```
+pip install requirements.txt
+```
+
+## Train model
+```
+python main.py --wandb online/offline/disabled --test
+```
+Args:
+
+wandb: mode
+
+test: test model training on small dataset (use wandb disabled)

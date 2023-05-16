@@ -1,34 +1,32 @@
-##################################################
-# exp_opts
-##################################################
+#################### exp_opts ###############################
 random_state: 404
 exp_name: 'student_model'
 save_model: false
 
-##################################################
 # data_opts
-##################################################
-data_path: "../OKT/data"
-data_filename: "python_1_submits.pkl"
+data_path: "data"
+dataset_filename: "python_submits_last_2.pkl"
+code_emb_filename: "submits_emb.pt"
+submits_filename: "python_statements_gpt2.pkl"
 test_size: 0.2
 max_len: 300  # maximum number of submission per student 
 n_workers: 0
 
-##################################################
+################## model_opts ############################№##
 # model_opts
-##################################################
-num_encoder_layers: 3
+num_encoder_layers: 1
 num_decoder_layers: 3
-emb_size: 768
-nhead: 8
-dim_feedforward: 256
+emb_size: 256
+nhead: 16
+dim_feedforward: 128
+dropout: 0.2
 
-##################################################
 # train_opts
-##################################################
-is_test: false
-epochs: 100
-batch_size: 32
-lr: 0.001
-warmup_steps: 30
-use_scheduler: true
+epochs: 20
+batch_size: 128
+lr: 0.0005
+warmup_steps: 10
+use_scheduler: True
+device: 'cuda'
+pos_weight: 1.0
+continue_training: False
